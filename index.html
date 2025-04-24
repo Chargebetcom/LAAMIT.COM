@@ -26,8 +26,14 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      flex-direction: row; /* جعل الاسم يسار والأيقونة يمين */
+      flex-direction: row;
       z-index: 1000;
+    }
+
+    .right-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
     .header-title {
@@ -87,10 +93,12 @@
 <body>
 
   <header>
-    <div class="header-title">laamit</div>
-    <div class="menu-icon">
-      <div class="menu-line-long"></div>
-      <div class="menu-line-short"></div>
+    <div class="right-header">
+      <div class="menu-icon">
+        <div class="menu-line-long"></div>
+        <div class="menu-line-short"></div>
+      </div>
+      <div class="header-title">laamit</div>
     </div>
   </header>
 
