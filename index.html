@@ -20,12 +20,12 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 15px 20px;
+      padding: 12px 18px;
       background-color: #1e1e1e;
     }
 
     .header-title {
-      font-size: 20px;
+      font-size: 18px;
       font-weight: bold;
     }
 
@@ -46,52 +46,54 @@
 
     .main-title {
       text-align: center;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: bold;
-      margin: 25px 0 20px;
+      margin: 20px 0 15px;
     }
 
     .buttons-grid {
       display: grid;
-      grid-template-columns: 1fr 0.9fr;
-      gap: 10px;
-      padding: 0 10px 40px;
-      max-width: 420px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px;
+      padding: 0 10px 20px;
+      max-width: 390px;
       margin: auto;
-    }
-
-    .buttons-grid:nth-child(even) {
-      grid-template-columns: 0.9fr 1fr;
     }
 
     .shortcut-button {
       background-color: #2c2c2c;
       border: 1px solid #444;
-      border-radius: 40px;
+      border-radius: 30px;
       color: white;
       text-decoration: none;
-      font-size: 13px;
-      padding: 10px 12px;
+      font-size: 12px;
+      padding: 7px 8px;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
+      gap: 6px;
       transition: 0.2s;
       white-space: nowrap;
     }
 
     .shortcut-button img {
-      width: 18px;
-      height: 18px;
+      width: 16px;
+      height: 16px;
     }
 
     .shortcut-button:hover {
       background-color: #3a3a3a;
     }
 
-    @media (max-width: 480px) {
-      .buttons-grid {
-        grid-template-columns: 1fr;
+    @media (max-width: 450px) {
+      .shortcut-button {
+        font-size: 11px;
+        padding: 6px 6px;
+      }
+
+      .shortcut-button img {
+        width: 14px;
+        height: 14px;
       }
     }
   </style>
@@ -109,40 +111,44 @@
   <div class="main-title">كيف يمكنني مساعدتك؟</div>
 
   <div class="buttons-grid">
+    <a href="payeer.html" class="shortcut-button">
+      <img src="https://i.ibb.co/DD5px7xp/payeer-icon.png" alt="payeer">
+      شراء رصيد بايير PAYEER
+    </a>
+
     <a href="skrill.html" class="shortcut-button">
       <img src="https://i.ibb.co/bgSQjm3C/skrill-logo-icon-png-44628.jpg" alt="skrill">
       شراء رصيد سكريل SKRILL
     </a>
-    <a href="payeer.html" class="shortcut-button">
-      <img src="https://i.ibb.co/DD5px7xp/payeer-icon.png" alt="payeer">
-      شراء رصيد بايير PAYEER
+
+    <a href="paypal.html" class="shortcut-button">
+      <img src="https://i.ibb.co/VcYMzb4X/pngegg-6.png" alt="paypal">
+      شراء رصيد بايبال PAYPAL
     </a>
 
     <a href="redotpay.html" class="shortcut-button">
       <img src="https://i.ibb.co/JvkYF8Y/redotpay.png" alt="redotpay">
       شراء رصيد ريدوت باي REDOTPAY
     </a>
-    <a href="paypal.html" class="shortcut-button">
-      <img src="https://i.ibb.co/VcYMzb4X/pngegg-6.png" alt="paypal">
-      شراء رصيد بايبال PAYPAL
+
+    <a href="webmoney.html" class="shortcut-button">
+      <img src="https://i.ibb.co/0qrs3zr/webmoney.png" alt="webmoney">
+      شراء رصيد ويب موني WEBMONEY
     </a>
 
     <a href="airtm.html" class="shortcut-button">
       <img src="https://i.ibb.co/ZLg3zfx/airtm-logo.png" alt="airtm">
       شراء رصيد إير تيم AIRTM
     </a>
-    <a href="webmoney.html" class="shortcut-button">
-      <img src="https://i.ibb.co/0qrs3zr/webmoney.png" alt="webmoney">
-      شراء رصيد ويب موني WEBMONEY
+
+    <a href="volet.html" class="shortcut-button">
+      <img src="https://i.ibb.co/6vMBHvy/volet.png" alt="volet">
+      شراء رصيد فوولت VOLET
     </a>
 
     <a href="dealer.html" class="shortcut-button">
       <img src="https://i.ibb.co/1rZdnHp/orange.png" alt="orange">
       بيع وشراء رصيد أورنج ORANGE
-    </a>
-    <a href="volet.html" class="shortcut-button">
-      <img src="https://i.ibb.co/6vMBHvy/volet.png" alt="volet">
-      شراء رصيد فوولت VOLET
     </a>
   </div>
 
