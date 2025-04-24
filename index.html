@@ -4,10 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ChatGPT</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <style>
+    /* تحسين الأداء: استعمال خطوط النظام */
     * {
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
       margin: 0;
       padding: 0;
     }
@@ -19,7 +21,6 @@
 
     header {
       background-color: #1e1e1e;
-      color: white;
       padding: 15px 20px;
       display: flex;
       align-items: center;
@@ -44,17 +45,19 @@
       right: 0;
     }
 
-    .menu-icon::before {
-      top: -6px;
-    }
-
-    .menu-icon::after {
-      bottom: -6px;
-    }
+    .menu-icon::before { top: -6px; }
+    .menu-icon::after { bottom: -6px; }
 
     .header-title {
       font-size: 20px;
       font-weight: bold;
+    }
+
+    /* تحسين الأداء على الجوال */
+    @media (max-width: 600px) {
+      .header-title {
+        font-size: 18px;
+      }
     }
   </style>
 </head>
