@@ -69,35 +69,34 @@
       color: white;
       text-decoration: none;
       font-size: 12px;
-      padding: 10px 14px;
+      padding: 10px 12px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 10px;
+      justify-content: center;
+      gap: 6px;
       transition: 0.2s;
+      text-align: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
       white-space: nowrap;
-      text-align: right;
     }
 
     .shortcut-button img {
-      flex-shrink: 0;
       width: 15px;
       height: 15px;
+      flex-shrink: 0;
     }
 
     .shortcut-button:hover {
       background-color: #3a3a3a;
     }
 
+    /* تعديل خاص بالهاتف فقط */
     @media (max-width: 450px) {
-      .buttons-grid {
-        gap: 8px;
-        padding-bottom: 60px;
-      }
-
       .shortcut-button {
         font-size: 11px;
-        padding: 8px 12px;
+        gap: 4px;
+        padding: 9px 10px;
       }
 
       .shortcut-button img {
@@ -121,42 +120,42 @@
 
   <div class="buttons-grid">
     <a href="payeer.html" class="shortcut-button">
-      <span>شراء رصيد بايير PAYEER</span>
+      شراء رصيد بايير PAYEER
       <img src="https://i.ibb.co/DD5px7xp/payeer-icon.png" alt="payeer">
     </a>
 
     <a href="skrill.html" class="shortcut-button">
-      <span>شراء رصيد سكريل SKRILL</span>
+      شراء رصيد سكريل SKRILL
       <img src="https://i.ibb.co/bgSQjm3C/skrill-logo-icon-png-44628.jpg" alt="skrill">
     </a>
 
     <a href="paypal.html" class="shortcut-button">
-      <span>شراء رصيد بايبال PAYPAL</span>
+      شراء رصيد بايبال PAYPAL
       <img src="https://i.ibb.co/VcYMzb4X/pngegg-6.png" alt="paypal">
     </a>
 
     <a href="redotpay.html" class="shortcut-button">
-      <span>شراء رصيد ريدوت باي REDOTPAY</span>
+      شراء رصيد ريدوت باي REDOTPAY
       <img src="https://i.ibb.co/JvkYF8Y/redotpay.png" alt="redotpay">
     </a>
 
     <a href="webmoney.html" class="shortcut-button">
-      <span>شراء رصيد ويب موني WEBMONEY</span>
+      شراء رصيد ويب موني WEBMONEY
       <img src="https://i.ibb.co/0qrs3zr/webmoney.png" alt="webmoney">
     </a>
 
     <a href="airtm.html" class="shortcut-button">
-      <span>شراء رصيد إير تيم AIRTM</span>
+      شراء رصيد إير تيم AIRTM
       <img src="https://i.ibb.co/ZLg3zfx/airtm-logo.png" alt="airtm">
     </a>
 
     <a href="volet.html" class="shortcut-button">
-      <span>شراء رصيد فوولت VOLET</span>
+      شراء رصيد فوولت VOLET
       <img src="https://i.ibb.co/6vMBHvy/volet.png" alt="volet">
     </a>
 
     <a href="dealer.html" class="shortcut-button">
-      <span>بيع وشراء رصيد أورنج ORANGE</span>
+      بيع وشراء رصيد أورنج ORANGE
       <img src="https://i.ibb.co/1rZdnHp/orange.png" alt="orange">
     </a>
   </div>
