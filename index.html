@@ -19,11 +19,14 @@
     }
 
     header {
+      position: sticky;
+      top: 0;
       background-color: #1e1e1e;
       padding: 15px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      z-index: 1000;
     }
 
     .header-title {
@@ -59,8 +62,9 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: calc(100vh - 60px);
       text-align: center;
+      padding-top: 80px;
+      min-height: 100vh;
     }
 
     .main-question {
