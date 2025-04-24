@@ -1,66 +1,147 @@
-<!-- زر الترجمة -->
-<div class="language-selector">
-  <button onclick="toggleLanguages()" title="Translate">
-    🌐
-  </button>
-  <ul id="lang-list">
-    <li><a href="#" onclick="translateTo('ar')">العربية</a></li>
-    <li><a href="#" onclick="translateTo('en')">English</a></li>
-    <li><a href="#" onclick="translateTo('fr')">Français</a></li>
-    <li><a href="#" onclick="translateTo('es')">Español</a></li>
-  </ul>
-</div>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>laamit</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-<!-- CSS -->
-<style>
-.language-selector {
-  position: fixed;
-  top: 15px;
-  left: 15px;
-  z-index: 9999;
-}
+    body {
+      background-color: #1e1e1e;
+      color: #f0f0f0;
+    }
 
-.language-selector button {
-  background-color: transparent;
-  border: none;
-  font-size: 22px;
-  cursor: pointer;
-  color: white;
-}
+    header {
+      position: sticky;
+      top: 0;
+      background-color: #1e1e1e;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1000;
+    }
 
-.language-selector ul {
-  display: none;
-  list-style: none;
-  background-color: #2a2a2a;
-  padding: 5px;
-  border-radius: 6px;
-  margin-top: 5px;
-}
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
 
-.language-selector ul li {
-  margin: 5px 0;
-}
+    .header-title {
+      font-size: 20px;
+      font-weight: bold;
+    }
 
-.language-selector ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-}
+    .menu-icon {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 5px;
+    }
 
-.language-selector ul li a:hover {
-  text-decoration: underline;
-}
-</style>
+    .menu-icon div {
+      background-color: white;
+      border-radius: 2px;
+    }
 
-<!-- JavaScript -->
-<script>
-  function toggleLanguages() {
-    const list = document.getElementById("lang-list");
-    list.style.display = list.style.display === "block" ? "none" : "block";
-  }
+    .menu-line-long {
+      width: 22px;
+      height: 2px;
+    }
 
-  function translateTo(lang) {
-    const url = `https://translate.google.com/translate?sl=en&tl=${lang}&u=${encodeURIComponent(window.location.href)}`;
-    window.location.href = url;
-  }
-</script>
+    .menu-line-short {
+      width: 12px;
+      height: 2px;
+    }
+
+    .translate-btn {
+      background-color: transparent;
+      border: 1px solid #ccc;
+      color: #f0f0f0;
+      padding: 6px 10px;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .translate-btn:hover {
+      background-color: #2e2e2e;
+    }
+
+    .center-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding-top: 80px;
+      min-height: 100vh;
+    }
+
+    .main-question {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      .header-title {
+        font-size: 18px;
+      }
+
+      .main-question {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-left">
+      <div class="header-title">laamit</div>
+      <div class="menu-icon">
+        <div class="menu-line-long"></div>
+        <div class="menu-line-short"></div>
+      </div>
+    </div>
+    <button class="translate-btn" onclick="googleTranslateElementInit()">Translate this page</button>
+  </header>
+
+  <div class="center-box">
+    <div class="main-question">How can I help you?</div>
+  </div>
+
+  <!-- Google Translate API -->
+  <div id="google_translate_element" style="display:none;"></div>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      if (!window.googleTranslateInitialized) {
+        var gt = document.createElement('script');
+        gt.type = 'text/javascript';
+        gt.src = '//translate.google.com/translate_a/element.js?cb=loadGoogleTranslate';
+        document.body.appendChild(gt);
+        window.googleTranslateInitialized = true;
+      }
+    }
+
+    function loadGoogleTranslate() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+      document.getElementById('google_translate_element').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
