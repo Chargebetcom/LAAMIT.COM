@@ -29,12 +29,6 @@
       z-index: 1000;
     }
 
-    .header-left {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-
     .header-title {
       font-size: 20px;
       font-weight: bold;
@@ -61,21 +55,6 @@
     .menu-line-short {
       width: 12px;
       height: 2px;
-    }
-
-    .translate-btn {
-      background-color: transparent;
-      border: 1px solid #ccc;
-      color: #f0f0f0;
-      padding: 6px 10px;
-      border-radius: 8px;
-      font-size: 14px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .translate-btn:hover {
-      background-color: #2e2e2e;
     }
 
     .center-box {
@@ -107,41 +86,16 @@
 <body>
 
   <header>
-    <div class="header-left">
-      <div class="header-title">laamit</div>
-      <div class="menu-icon">
-        <div class="menu-line-long"></div>
-        <div class="menu-line-short"></div>
-      </div>
+    <div class="header-title">laamit</div>
+    <div class="menu-icon">
+      <div class="menu-line-long"></div>
+      <div class="menu-line-short"></div>
     </div>
-    <button class="translate-btn" onclick="googleTranslateElementInit()">ترجمة الصفحة</button>
   </header>
 
   <div class="center-box">
     <div class="main-question">كيف يمكنني المساعدة؟</div>
   </div>
-
-  <!-- Google Translate API -->
-  <div id="google_translate_element" style="display:none;"></div>
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      if (!window.googleTranslateInitialized) {
-        var gt = document.createElement('script');
-        gt.type = 'text/javascript';
-        gt.src = '//translate.google.com/translate_a/element.js?cb=loadGoogleTranslate';
-        document.body.appendChild(gt);
-        window.googleTranslateInitialized = true;
-      }
-    }
-
-    function loadGoogleTranslate() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'ar',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-      }, 'google_translate_element');
-      document.getElementById('google_translate_element').style.display = 'block';
-    }
-  </script>
 
 </body>
 </html>
