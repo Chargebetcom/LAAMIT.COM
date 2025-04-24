@@ -12,12 +12,12 @@
       margin: 0;  
       padding: 0;  
     }  
-  
+
     body {  
       background-color: #1e1e1e;  
       color: #f0f0f0;  
     }  
-  
+
     header {  
       background-color: #1e1e1e;  
       padding: 15px 20px;  
@@ -26,45 +26,63 @@
       justify-content: space-between;  
       border-bottom: 1px solid #333;  
     }  
-  
-    .menu-icon {  
-      width: 20px;  
+
+    .menu-lines {  
+      display: flex;  
+      flex-direction: column;  
+      justify-content: space-between;  
+      height: 16px;  
+    }
+
+    .menu-line {  
+      width: 22px;  
       height: 2px;  
       background-color: white;  
-      position: relative;  
-    }  
-  
-    .menu-icon::before,  
-    .menu-icon::after {  
-      content: "";  
-      width: 20px;  
-      height: 2px;  
-      background-color: white;  
-      position: absolute;  
-      right: 0;  
-    }  
-  
-    .menu-icon::before { top: -6px; }  
-    .menu-icon::after { bottom: -6px; }  
-  
+    }
+
     .header-title {  
       font-size: 20px;  
       font-weight: bold;  
     }  
-  
+
+    .center-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: calc(100vh - 60px);
+      text-align: center;
+    }
+
+    .main-question {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
     @media (max-width: 600px) {  
       .header-title {  
         font-size: 18px;  
       }  
+      .main-question {
+        font-size: 20px;
+      }
     }  
   </style>  
 </head>  
 <body>  
-  
+
   <header>  
     <div class="header-title">laamit</div>  
-    <div class="menu-icon"></div>  
+    <div class="menu-lines">
+      <div class="menu-line"></div>
+      <div class="menu-line"></div>
+    </div>  
   </header>  
-  
+
+  <div class="center-box">
+    <div class="main-question">كيف يمكنني المساعدة؟</div>
+  </div>
+
 </body>  
 </html>
