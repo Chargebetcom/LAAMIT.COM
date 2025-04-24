@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -114,11 +114,11 @@
         <div class="menu-line-short"></div>
       </div>
     </div>
-    <button class="translate-btn" onclick="googleTranslateElementInit()">Translate this page</button>
+    <button class="translate-btn" onclick="googleTranslateElementInit()">ترجمة الصفحة</button>
   </header>
 
   <div class="center-box">
-    <div class="main-question">How can I help you?</div>
+    <div class="main-question">كيف يمكنني المساعدة؟</div>
   </div>
 
   <!-- Google Translate API -->
@@ -136,7 +136,7 @@
 
     function loadGoogleTranslate() {
       new google.translate.TranslateElement({
-        pageLanguage: 'en',
+        pageLanguage: 'ar',
         layout: google.translate.TranslateElement.InlineLayout.SIMPLE
       }, 'google_translate_element');
       document.getElementById('google_translate_element').style.display = 'block';
