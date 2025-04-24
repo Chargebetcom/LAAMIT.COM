@@ -26,6 +26,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-direction: row-reverse; /* لعكس الترتيب: الاسم يسار، القائمة يمين */
       z-index: 1000;
     }
 
@@ -37,7 +38,7 @@
     .menu-icon {
       display: flex;
       flex-direction: column;
-      align-items: flex-end;
+      align-items: flex-start;
       justify-content: center;
       gap: 5px;
     }
@@ -86,15 +87,15 @@
 <body>
 
   <header>
-    <div class="header-title">laamit</div>
     <div class="menu-icon">
       <div class="menu-line-long"></div>
       <div class="menu-line-short"></div>
     </div>
+    <div class="header-title">laamit</div>
   </header>
 
   <div class="center-box">
-    <div class="main-question">كيف يمكنني المساعدة؟</div>
+    <div class="main-question">How can I help you?</div>
   </div>
 
 </body>
