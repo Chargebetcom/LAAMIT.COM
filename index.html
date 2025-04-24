@@ -66,9 +66,9 @@
       background-color: #2c2c2c;
       color: #fff;
       border: 1px solid #444;
-      border-radius: 12px;
+      border-radius: 30px;
       padding: 12px 20px;
-      font-size: 16px;
+      font-size: 15px;
       cursor: pointer;
       transition: 0.2s;
       text-decoration: none;
@@ -84,6 +84,28 @@
 
     .shortcut-button:hover {
       background-color: #444;
+    }
+
+    .more-buttons {
+      display: none;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .show {
+      display: flex !important;
+    }
+
+    .more-toggle {
+      background-color: #444;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 15px;
+      margin-top: 10px;
     }
 
     @media (max-width: 600px) {
@@ -110,46 +132,61 @@
   <div class="main-question">كيف يمكنني مساعدتك؟</div>
 
   <div class="buttons-container">
+    <!-- أول 3 أزرار -->
     <a href="payeer.html" class="shortcut-button">
-      <img src="https://cryptologos.cc/logos/payeer-payeer-logo.png" alt="payeer" />
+      <img src="#" alt="payeer" />
       شراء رصيد بايير PAYEER
     </a>
 
     <a href="skrill.html" class="shortcut-button">
-      <img src="https://cryptologos.cc/logos/skrill-skrill-logo.png" alt="skrill" />
+      <img src="#" alt="skrill" />
       شراء رصيد سكريل SKRILL
     </a>
 
     <a href="paypal.html" class="shortcut-button">
-      <img src="https://cryptologos.cc/logos/paypal-paypal-logo.png" alt="paypal" />
+      <img src="#" alt="paypal" />
       شراء رصيد بايبال PAYPAL
     </a>
+  </div>
 
+  <div class="buttons-container more-buttons" id="moreSection">
+    <!-- الأزرار الإضافية -->
     <a href="redotpay.html" class="shortcut-button">
-      <img src="https://i.ibb.co/tYRgNw7/redotpay.png" alt="redotpay" />
+      <img src="#" alt="redotpay" />
       شراء رصيد ريدوت باي REDOTPAY
     </a>
 
     <a href="webmoney.html" class="shortcut-button">
-      <img src="https://cryptologos.cc/logos/webmoney-webmoney-logo.png" alt="webmoney" />
+      <img src="#" alt="webmoney" />
       شراء رصيد ويب موني WEBMONEY
     </a>
 
     <a href="airtm.html" class="shortcut-button">
-      <img src="https://cryptologos.cc/logos/airtm-airtm-logo.png" alt="airtm" />
+      <img src="#" alt="airtm" />
       شراء رصيد إير تيم AIRTM
     </a>
 
     <a href="volet.html" class="shortcut-button">
-      <img src="https://i.ibb.co/WvV7K53/volet.png" alt="volet" />
+      <img src="#" alt="volet" />
       شراء رصيد فوولت VOLET
     </a>
 
     <a href="dealer.html" class="shortcut-button">
-      <img src="https://i.ibb.co/xjFG3mZ/inwi-orange.png" alt="orange" />
+      <img src="#" alt="orange" />
       بيع وشراء رصيد أورنج ORANGE
     </a>
   </div>
+
+  <div style="text-align: center;">
+    <button class="more-toggle" onclick="toggleMore()">المزيد</button>
+  </div>
+
+  <script>
+    function toggleMore() {
+      const more = document.getElementById("moreSection");
+      more.classList.toggle("show");
+    }
+  </script>
 
 </body>
 </html>
