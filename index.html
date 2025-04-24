@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>موقعي</title>
+  <title>ChatGPT</title>
   <style>
     * {
       box-sizing: border-box;
@@ -15,37 +15,46 @@
     body {
       background-color: #1e1e1e;
       color: #f0f0f0;
-      line-height: 1.6;
     }
 
     header {
-      background-color: #2e7d32;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 20px;
+      background-color: #1e1e1e;
+      color: white;
+      padding: 15px 20px;
       display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
+      align-items: center;
       justify-content: space-between;
+      border-bottom: 1px solid #333;
     }
 
-    .box {
-      background-color: #2c2c2c;
-      flex: 1 1 300px;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.4);
-      transition: transform 0.3s;
+    .menu-icon {
+      width: 20px;
+      height: 2px;
+      background-color: white;
+      position: relative;
     }
 
-    .box:hover {
-      transform: translateY(-5px);
+    .menu-icon::before,
+    .menu-icon::after {
+      content: "";
+      width: 20px;
+      height: 2px;
+      background-color: white;
+      position: absolute;
+      right: 0;
+    }
+
+    .menu-icon::before {
+      top: -6px;
+    }
+
+    .menu-icon::after {
+      bottom: -6px;
+    }
+
+    .header-title {
+      font-size: 20px;
+      font-weight: bold;
     }
 
     footer {
@@ -55,39 +64,16 @@
       padding: 10px;
       margin-top: 40px;
     }
-
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-        padding: 10px;
-      }
-
-      .box {
-        width: 100%;
-      }
-    }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>مرحبا بك في موقعي</h1>
+    <div class="header-title">ChatGPT</div>
+    <div class="menu-icon"></div>
   </header>
 
-  <div class="container">
-    <div class="box">
-      <h2>خدمة 1</h2>
-      <p>هذا مثال على محتوى يمكن وضعه في صندوق استجابة.</p>
-    </div>
-    <div class="box">
-      <h2>خدمة 2</h2>
-      <p>تم تصميم هذا الصندوق ليعمل على جميع الأجهزة.</p>
-    </div>
-    <div class="box">
-      <h2>خدمة 3</h2>
-      <p>يمكنك التوسع أو التعديل عليه بسهولة.</p>
-    </div>
-  </div>
+  <!-- يمكنك إضافة محتوى إضافي هنا -->
 
   <footer>
     جميع الحقوق محفوظة &copy; 2025
