@@ -63,21 +63,6 @@
       height: 2px;
     }
 
-    .translate-btn {
-      background-color: transparent;
-      border: 1px solid #ccc;
-      color: #f0f0f0;
-      padding: 6px 10px;
-      border-radius: 8px;
-      font-size: 14px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .translate-btn:hover {
-      background-color: #2e2e2e;
-    }
-
     .center-box {
       display: flex;
       flex-direction: column;
@@ -91,6 +76,14 @@
     .main-question {
       font-size: 22px;
       font-weight: bold;
+    }
+
+    /* Google Translate position */
+    #google_translate_element {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      z-index: 9999;
     }
 
     @media (max-width: 600px) {
@@ -114,34 +107,26 @@
         <div class="menu-line-short"></div>
       </div>
     </div>
-    <button class="translate-btn" onclick="googleTranslateElementInit()">Translate this page</button>
   </header>
 
   <div class="center-box">
     <div class="main-question">How can I help you?</div>
   </div>
 
-  <!-- Google Translate API -->
-  <div id="google_translate_element" style="display:none;"></div>
+  <!-- Google Translate Icon -->
+  <div id="google_translate_element"></div>
+
+  <!-- Google Translate Script -->
   <script type="text/javascript">
     function googleTranslateElementInit() {
-      if (!window.googleTranslateInitialized) {
-        var gt = document.createElement('script');
-        gt.type = 'text/javascript';
-        gt.src = '//translate.google.com/translate_a/element.js?cb=loadGoogleTranslate';
-        document.body.appendChild(gt);
-        window.googleTranslateInitialized = true;
-      }
-    }
-
-    function loadGoogleTranslate() {
       new google.translate.TranslateElement({
         pageLanguage: 'en',
+        includedLanguages: 'ar,en,fr,es',
         layout: google.translate.TranslateElement.InlineLayout.SIMPLE
       }, 'google_translate_element');
-      document.getElementById('google_translate_element').style.display = 'block';
     }
   </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>
